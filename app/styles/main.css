@@ -1,0 +1,432 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'MyriadPro Regular';
+
+  src: url('../fonts/MyriadPro-Regular.eot');
+  src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+       url('../fonts/MyriadPro-Regular.woff') format('woff'), 
+       url('../fonts/MyriadPro-Regular.ttf') format('truetype'), 
+       url('../fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+}
+
+@font-face {
+  font-family: 'MyriadPro SBold';
+
+  src: url('../fonts/MyriadPro-SemiBold.eot');
+  src: url('../fonts/MyriadPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MyriadPro-SemiBold.woff2') format('woff2'),
+       url('../fonts/MyriadPro-SemiBold.woff') format('woff'), 
+       url('../fonts/MyriadPro-SemiBold.ttf') format('truetype'), 
+       url('../fonts/MyriadPro-SemiBold.svg#MyriadPro-SemiBold') format('svg');
+}
+
+/* Fonts end */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'MyriadPro Regular';
+}
+
+
+/* Variables */
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.title {
+  font-size: 48px;
+}
+
+.title-white {
+  color: #fff;
+}
+
+.title-black {
+  color: #000;
+}
+
+/* For modern browsers */
+.clear:before,
+.clear:after {
+   content: "";
+   display: table;
+}
+.clear:after {
+   clear: both;
+}
+
+/* для IE6-7 */
+.clear {
+   zoom: 1;
+}
+
+
+/* Variables end */
+
+/* Page */
+
+.banner {
+  height: 768px;
+  max-width: 1800px;
+  margin: 0 auto;
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  animation-name: banner;
+  animation-duration: 1.2s;
+}
+
+@keyframes banner {
+  0% {
+    background-size: 3600px;
+  }
+
+  100% {
+    background-size: 1800px;
+  }
+}
+
+.banner-inner {
+  height: 100%;
+}
+
+.banner-inner .banner-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 57px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/* Content */
+
+.content {
+  color: #000;
+  padding-top: 45px;
+}
+
+.content .content-text {
+  font-size: 24px;
+}
+
+/* Slider */
+
+.main-slider {
+  margin-top: 125px;
+}
+
+.main-slider .slide {
+  width: 810px;
+  height: 474px;
+  transform: scale(.7);
+  opacity: .5;
+  transition: .5s;
+  margin: 35px 40px;
+  box-shadow: 0 12px 26px 4px #959595;
+  outline: none;
+}
+
+.main-slider .slide img {
+  width: 100%;
+}
+
+.main-slider .slide.slick-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.main-slider .slick-arrow {
+  width: 51px;
+  height: 94px;
+  text-indent: -9999px;
+  border: none;
+  background-image: url(../images/slider/arrows.png);
+  position: absolute;
+  top: 50%;
+  margin-top: -47px;
+  outline: none;
+  opacity: .7;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.main-slider .slick-arrow:hover {
+  opacity: 1;
+}
+
+.main-slider .slick-next {
+  background-position: -51px 0;
+  left: 50%;
+  margin-left: 495px;
+}
+
+
+.main-slider .slick-prev {
+  right: 50%;
+  margin-right: 495px;
+  z-index: 1;
+}
+
+/* Slider end */
+
+.user-speak {
+  margin-top: 95px;
+}
+
+.user-speak .title {
+  text-align: center;
+}
+
+.user-speak_head {
+  font-size: 24px;
+  box-shadow: 0 2px 3px #cdcdcd;
+  padding: 1px 0;
+  margin-top: 40px;
+}
+
+.user-speak_body {
+  font-size: 18px;
+}
+
+.user-speak_section {
+  width: 824px;
+  display: table;
+  margin: 19px auto;
+}
+
+.user-speak_section .section-item {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.user-speak_section .section-item:first-of-type {
+  width: 330px;
+  padding-right: 60px;
+}
+
+.user-speak_section .section-item:nth-of-type(2) {
+  width: 20%;
+}
+
+.user-speak_section .section-item:nth-of-type(3) {
+  width: 20%;
+}
+
+.users-quotes_list {
+  margin-top: 58px;
+}
+
+.users-quotes_list .user-quote {
+  width: 50%;
+  float: left;
+  list-style: none;
+  margin-bottom: 85px;
+}
+
+.user-quote blockquote {
+  font-size: 18px;
+  border-left: 4px solid #00afec;
+  padding: 13px 20px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.user-quote .user-info {
+  margin-top: 20px;
+}
+
+.user-quote .user-left {
+  width: 106px;
+  display: table-cell;
+}
+.user-quote .user-avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  height: 106px;
+}
+
+.user-quote .user-body {
+  vertical-align: middle;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: table-cell;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+
+.user-quote .user-body .user-address {
+  font-family: 'MyriadPro SBold';
+}
+
+/* Content end */
+
+
+
+/* media */
+
+@media screen and (max-width: 1199px) {
+
+  .container {
+    width: 991px;
+  }
+
+  .main-slider .slick-next {
+    margin-left: 440px; 
+  }
+
+  .main-slider .slick-prev {
+    margin-right: 440px; 
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .container {
+    width: 100%;
+  }
+  .banner {
+    height: 650px;
+  }
+
+  .main-slider {
+    margin-top: 90px;
+  }
+
+  .main-slider .slick-next {
+    margin-left: 290px; 
+  }
+
+  .main-slider .slick-prev {
+    margin-right: 290px; 
+  }
+
+  .main-slider .slide {
+    width: 500px;
+    height: 294px;
+  }
+
+  .user-speak_section {
+    width: 767px;
+  }
+
+  .user-speak_section .section-item:first-of-type {
+    padding-left: 15px;
+    padding-right: 25px;
+  }
+
+  .user-speak_section .section-item:nth-of-type(2) {
+    width: 18%;
+  }
+
+  .user-speak_section .section-item:nth-of-type(3) {
+    width: 18%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 500px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .main-slider .slide {
+    width: 450px;
+    height: 264px;
+    margin: 20px 0;
+    box-shadow: 0 6px 13px 2px #959595;
+  }
+
+  .user-speak_section {
+    width: 100%;
+  }
+
+  .user-speak_section .section-item:first-of-type {
+    width: 40%;
+  }
+
+}
+
+@media screen and (max-width: 639px) {
+  
+  .main-slider .slide {
+    width: 320px;
+    height: 188px;
+  }
+
+  .users-quotes_list .user-quote {
+    width: 100%;
+    float: none;
+  }
+
+  .user-speak_table {
+    overflow: auto;
+  }
+
+  .user-speak_head,
+  .user-speak_body {
+    width: 620px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  
+  .title {
+    font-size: 24px;
+  }
+
+  .banner {
+    height: 380px;
+  }
+
+  .banner-inner .banner-title {
+    padding-bottom: 20px;
+  }
+
+  .content {
+    padding-top: 15px;
+  }
+
+  .content .content-text {
+    font-size: 18px;
+  }
+
+  .main-slider {
+    margin-top: 20px;
+  }
+
+  .main-slider .slide {
+    width: 290px;
+    height: 171px;
+  }
+
+  .user-speak {
+    margin-top: 35px;
+  }
+
+  .user-speak .title {
+    padding: 0 15px;
+    text-align: left;
+  }
+
+  .user-speak_head {
+    margin-top: 0;
+  }
+}
